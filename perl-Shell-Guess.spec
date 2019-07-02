@@ -36,6 +36,6 @@ it, depending on the platform that it is running on.
 %make_install
 
 %files
-%doc Changes INSTALL LICENSE META.json META.yml MYMETA.yml README
+%doc Changes INSTALL LICENSE META.json META.yml README
 %{_mandir}/man3/*
 %{perl_vendorlib}/*
