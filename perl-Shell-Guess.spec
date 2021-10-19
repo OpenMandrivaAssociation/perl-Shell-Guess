@@ -28,7 +28,7 @@ it, depending on the platform that it is running on.
 %autosetup -n %{upstream_name}-%{upstream_version}
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 
 %make_build
 
@@ -37,5 +37,5 @@ it, depending on the platform that it is running on.
 
 %files
 %doc Changes INSTALL LICENSE META.json META.yml README
-%{_mandir}/man3/*
+%doc %{_mandir}/man3/*
 %{perl_vendorlib}/*
