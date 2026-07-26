@@ -1,17 +1,15 @@
 %define upstream_name Shell-Guess
-%define upstream_version 0.09
-
 %{?perl_default_filter}
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    2
+Version:    0.09
+Release:    3
 
 Summary:    Make an educated guess about the shell in use
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Shell/%{upstream_name}-%{upstream_version}.tar.gz
+Url:        https://metacpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Shell/%{upstream_name}-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl(ExtUtils::MakeMaker)
@@ -26,7 +24,7 @@ perl script directly (the "running" shell), or the users' login shell
 it, depending on the platform that it is running on.
 
 %prep
-%autosetup -n %{upstream_name}-%{upstream_version}
+%autosetup -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
