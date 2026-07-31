@@ -2,8 +2,8 @@
 %{?perl_default_filter}
 
 Name:       perl-%{upstream_name}
-Version:    0.09
-Release:    3
+Version:    0.10
+Release:    1
 
 Summary:    Make an educated guess about the shell in use
 License:    GPL+ or Artistic
@@ -24,7 +24,7 @@ perl script directly (the "running" shell), or the users' login shell
 it, depending on the platform that it is running on.
 
 %prep
-%autosetup -n %{upstream_name}-%{version}
+%autosetup -n Shell-Guess-0.10
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
